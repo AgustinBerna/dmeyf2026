@@ -73,11 +73,9 @@ basal_features.py
 ```
 
 
-## 4. Paquetes de referencia
+## 4. Librerias
 
-Python **3.13.12**, Windows x86_64, 8 threads de entrenamiento y límite DuckDB de 4 GB. La máquina dispone de 16 CPU lógicas y aproximadamente 32 GiB de RAM.
-
-| Paquete | Versión |
+| Versión |
 |---|---:|
 | duckdb | 1.5.5 |
 | lightgbm | 4.7.0 |
