@@ -4,7 +4,7 @@
 
 |  |  |
 |---|---|
-| Target de entrenamiento | BAJA+1/BAJA+2 contra CONTINUA |
+| Target de entrenamiento | BAJA+1/BAJA+2 contra CONTINUA con undersampling del 50% solo en la clase CONTINUA |
 | Features | Basales, flags, signed ranks por drift y lag/delta 1/2; 785 totales |
 | Pesos | 50%/25%/25% de las ganancias; sino Junio contaba 2 veces|
 | Búsqueda | 60 trials Optuna TPE, secuencial |
