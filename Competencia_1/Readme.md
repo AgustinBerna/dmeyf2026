@@ -77,5 +77,5 @@ Python **3.13.12**, Windows x86_64, 8 threads de entrenamiento y límite DuckDB 
 
 ## 5. Reproducir 
 
-Poné competencia_01_crudo.csv junto a los .py y ejecutá:
+Poné competencia_01_crudo.csv (se tiene que llamar asi) junto a los .py y ejecutá:
 python -u correr.py
