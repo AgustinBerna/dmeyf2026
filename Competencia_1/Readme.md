@@ -37,17 +37,20 @@ Se agregaron de las 152 variables basales sus lags1 y 2, delta lag 1 y 2. Tres f
 Los folds 0 y 1 dejan un mes intermedio. El fold 2 incorpora mayo y evalúa junio sin gap intermedio. La primera prueba fue solo con folds 0 y 1, dejando el gap como de 1 mes, pero decidí agregar mayo como un tercer fold que entrena con marzo, abril y evalúa junio, para comparar los hiperparámetros con una ventana de entrenamiento más amplia.
 
 Se ejecutan 60 trials secuenciales con el sampler TPE, usando la semilla 700087. Cada trial evalúa una misma combinación de hiperparámetros en los tres folds y maximiza la ganancia ponderada descrita anteriormente.
-Hiperparámetro	Espacio de búsqueda	Muestreo
-num_iterations	300–2.000, pasos de 100	Entero
-num_leaves	20–256	Entero
-min_sum_hessian_in_leaf	0,01–20	Logarítmico
-learning_rate	0,01–0,10	Logarítmico
-feature_fraction	0,10–1,00	Uniforme
-min_data_in_leaf	100–3.000	Entero logarítmico
+Busqueda:
+
+| Hiperparámetro | Espacio de búsqueda | Muestreo |
+|---|---|---|
+| `num_iterations` | 300–2.000 | Entero |
+| `num_leaves` | 20–256 | Entero |
+| `min_sum_hessian_in_leaf` | 0,01–20 | Logarítmico |
+| `learning_rate` | 0,01–0,10 | Logarítmico |
+| `feature_fraction` | 0,10–1,00 | Uniforme |
+| `min_data_in_leaf` | 100–3.000 | Entero logarítmico |
 
 
-num_iterations es el máximo de árboles permitido: el early stopping por ganancia en 100 iteraciones.
 Se mantienen fijos max_bin=31, bagging_fraction=0,7 y bagging_freq=1.
+
 Se conservan las 10 configuraciones con mayor ganancia ponderada. Para cada una, el número de árboles del entrenamiento final se fija como la mediana de las mejores iteraciones de sus tres folds
 
 Se evalúan N=7.000…15.000 cada 500 clientes. Cada trial maximiza:
