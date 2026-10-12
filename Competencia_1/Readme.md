@@ -94,3 +94,19 @@ basal_features.py
 
 Poné competencia_01_crudo.csv (se tiene que llamar asi) junto a los .py y ejecutá:
 python -u correr.py
+
+
+Los resultados se guardan en `runs/`:
+
+| Salida | Contenido |
+|---|---|
+| `envio_agosto_topN.csv` | Único envío final: N IDs enteros, sin encabezado, seleccionados por el promedio de probabilidades de los 200 modelos |
+| `scores_agosto_ensemble.csv.gz` | Todos los clientes de agosto y su probabilidad promedio |
+| `expanding_trials.csv` | Resultados de los 60 trials de Optuna |
+| `ensemble_validation_curve.csv` | Curva de ganancia del ensamble de validación por TopN |
+| `frozen.json` y `cut.json` | Configuraciones seleccionadas y corte elegido |
+| `models/` y `scores/` | Modelos y predicciones individuales |
+| `run.log` | Registro de avance y errores |
+| `FINALIZADO.json` | Confirmación de que la corrida terminó |
+
+
